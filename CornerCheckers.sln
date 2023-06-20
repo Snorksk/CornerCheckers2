@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CornerCheckers", "CornerCheckers\CornerCheckers.csproj", "{D86DD75C-87A8-4503-B0A6-789A75C87444}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D86DD75C-87A8-4503-B0A6-789A75C87444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86DD75C-87A8-4503-B0A6-789A75C87444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86DD75C-87A8-4503-B0A6-789A75C87444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86DD75C-87A8-4503-B0A6-789A75C87444}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB07A3B5-B78F-4E5D-8147-C50D5D919DFC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="CornerCheckers.Views.Icons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CornerCheckers.Views"
+             mc:Ignorable="d" 
+             SnapsToDevicePixels="True">
+    <UserControl.Resources>
+        <DropShadowEffect x:Key="BlackShadow" BlurRadius="1" ShadowDepth="0" Color="Black"/>
+        <DropShadowEffect x:Key="WhiteShadow" BlurRadius="1" ShadowDepth="0" Color="White"/>
+        <Style TargetType="Path" x:Key="InvisiblePath">
+            <Setter Property="Visibility" Value="Collapsed"/>
+        </Style>
+        <Style TargetType="Path" x:Key="BlackCh" BasedOn="{StaticResource InvisiblePath}">
+            <Setter Property="Data" Value="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z"/>
+        </Style>
+        <Style TargetType="Path" x:Key="WhiteCh" BasedOn="{StaticResource InvisiblePath}">
+            <Setter Property="Data" Value="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z"/>
+        </Style>
+        <Style TargetType="Path" x:Key="WhiteChecker" BasedOn="{StaticResource WhiteCh}">
+            <Setter Property="Fill" Value="White"/>
+            <Setter Property="Effect" Value="{StaticResource BlackShadow}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Icon,RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteChecker">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Path" x:Key="BlackChecker" BasedOn="{StaticResource BlackCh}">
+            <Setter Property="Fill" Value="Black"/>
+            <Setter Property="Effect" Value="{StaticResource WhiteShadow}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Icon,RelativeSource={RelativeSource AncestorType=UserControl}}"  Value="BlackChecker">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="local:Icons">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Viewbox>
+                            <Grid Width="25" Height="25">
+                                <Path Style="{StaticResource WhiteChecker}"/>
+                                <Path Style="{StaticResource BlackChecker}"/>
+                            </Grid>
+                        </Viewbox>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+</UserControl>
